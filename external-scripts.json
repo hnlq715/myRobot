@@ -1,4 +1,5 @@
 [
+  "hubot-reload-scripts",
   "hubot-diagnostics",
   "hubot-help",
   "hubot-google-images",
