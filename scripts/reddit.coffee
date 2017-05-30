@@ -44,3 +44,4 @@ module.exports = (robot)->
 
         text = "#{title} - #{url}"
         response_handler text
+        response_handler itme.data.body_html
