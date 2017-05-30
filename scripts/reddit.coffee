@@ -36,12 +36,15 @@ module.exports = (robot)->
       body  = JSON.parse( body )
       list = body.data.children
       after = body.data.after
-      response_handler after 
+      response_handler after
 
       for item in list
+
         title = item.data.title || item.data.link_title
         url = item.data.url || item.data.link_url
+        if item.kind == "t1"
+          content = item.data.body
 
-        text = "#{title} - #{url}"
-        response_handler text
-        response_handler item.data.body_html
+        response_handler title
+        response_handler url
+        response_handler item.data.body
