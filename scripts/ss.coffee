@@ -28,11 +28,11 @@ module.exports = (robot) ->
       msg.send stdout
       msg.send stderr
 
-    command = "sudo ssh root@139.59.220.183 /root/ss-bash/ssadmin.sh #{com}"
+    # command = "sudo ssh root@139.59.220.183 /root/ss-bash/ssadmin.sh #{com}"
 
-    msg.send "This is the command #{command}."
+    # msg.send "This is the command #{command}."
 
-    @exec command, (error, stdout, stderr) ->
-      msg.send error
-      msg.send stdout
-      msg.send stderr
+    # @exec command, (error, stdout, stderr) ->
+    #   msg.send error
+    #   msg.send stdout
+    #   msg.send stderr
