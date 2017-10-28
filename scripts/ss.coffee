@@ -19,7 +19,7 @@ module.exports = (robot) ->
  robot.respond /ss (.*)$/i, (msg) ->
     com = msg.match[1]
     @exec = require('child_process').exec
-    command = "/root/ss-bash/ssadmin.sh #{com}"
+    command = "sudo /root/ss-bash/ssadmin.sh #{com}"
 
     msg.send "This is the command #{command}."
 
@@ -28,7 +28,7 @@ module.exports = (robot) ->
       msg.send stdout
       msg.send stderr
 
-    command = "ssh root@139.59.220.183 /root/ss-bash/ssadmin.sh #{com}"
+    command = "sudo ssh root@139.59.220.183 /root/ss-bash/ssadmin.sh #{com}"
 
     msg.send "This is the command #{command}."
 
