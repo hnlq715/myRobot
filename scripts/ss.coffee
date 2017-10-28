@@ -21,7 +21,6 @@ module.exports = (robot) ->
     @exec = require('child_process').exec
     command = "/root/ss-bash/ssadmin.sh #{com}"
 
-    msg.send "Looking #{com}..."
     msg.send "This is the command #{command}."
 
     @exec command, (error, stdout, stderr) ->
