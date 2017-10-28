@@ -25,16 +25,6 @@ module.exports = (robot) ->
 
     child_process.exec command, (error, stdout, stderr) ->
       if error
-        msg.send stderr
-      else
-        msg.send stdout
-
-    command = "ssh root@139.59.220.183 /root/ss-bash/ssadmin.sh #{com}"
-
-    msg.send "This is the command #{command}."
-
-    child_process.exec command, (error, stdout, stderr) ->
-      if error
-        msg.send stderr
+        msg.send error, stderr
       else
         msg.send stdout
