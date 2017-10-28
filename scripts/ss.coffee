@@ -29,7 +29,7 @@ module.exports = (robot) ->
       else
         msg.send stdout
 
-    command = "sudo ssh root@139.59.220.183 /root/ss-bash/ssadmin.sh #{com}"
+    command = "ssh root@139.59.220.183 /root/ss-bash/ssadmin.sh #{com}"
 
     msg.send "This is the command #{command}."
 
